@@ -13,6 +13,13 @@ body {
 }
 
 /* Navbar modern spacing and link styles */
+body, main, .container {
+  padding-top: 70px !important; /* Adjust if your navbar is taller/shorter */
+}
+
+.navbar {
+  z-index: 1050; /* Ensures navbar always sits on top of content */
+}
 .navbar-nav .nav-link {
   font-weight: 600;
   font-size: 1.07rem;
