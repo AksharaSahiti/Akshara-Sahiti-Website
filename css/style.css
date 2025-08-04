@@ -246,3 +246,14 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
     padding-top: 60px;
   }
 }
+@media (max-width: 991px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Tune as needed */
+    text-align: center;
+  }
+}
+
