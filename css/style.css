@@ -31,6 +31,7 @@ html, body {
 /* Only push down main content, not the footer/whole body */
 .main-content {
   padding-top: 70px; /* Same as navbar height */
+padding-bottom: 80px;
 }
 
 .navbar-nav .nav-link {
@@ -45,9 +46,17 @@ html, body {
 
 /* Fixed Footer: visually light, always at bottom */
 footer {
-  background-color: rgba(255,255,255,0.8) !important;
-  border-top: 1px solid #e3e3e3;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1050;
+  border-top: 1px solid #555;
+  background-color: #222;     /* Solid dark gray/black background */
+  color: #ccc;               /* Light contrasting text */
   font-size: 1rem;
+  height: 60px;
+  line-height: 60px;
+text-align: center;
 }
 
 /* Profile image/hero enhancements */
@@ -204,4 +213,11 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }
-
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
