@@ -1,58 +1,138 @@
-
+/* Animated Gradient Background, affects all pages */
 body {
+  background: linear-gradient(-45deg, #677eea, #764ba2, #43cea2, #185a9d);
+  background-size: 400% 400%;
+  animation: gradientBG 13s ease infinite;
+  min-height: 100vh;
   scroll-behavior: smooth;
 }
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
 
+/* Navbar modern spacing and link styles */
 .navbar-nav .nav-link {
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.07rem;
   transition: color 0.3s ease-in-out;
 }
-
-.navbar-nav .nav-link:hover {
-  color: #677eea;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #43cea2 !important;
 }
 
-/* Fixed footer fix for body padding */
-body {
-  padding-bottom: 60px;
-}
-
-/* Dark mode styles */
-body.bg-dark {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-}
-
-.navbar.bg-light {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
+/* Fixed Footer: visually light, always at bottom */
 footer {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255,255,255,0.8) !important;
+  border-top: 1px solid #e3e3e3;
+  font-size: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  body.bg-light {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-  }
-}
-
-/* Animations and effects */
-.animate__fadeInDown {
-  animation-duration: 1.5s;
-  animation-delay: 0.4s;
-}
-
-/* Profile image shadow */
+/* Profile image/hero enhancements */
 .rounded-circle {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 24px rgba(67,126,234,.15);
+  border:6px solid #fff;
 }
 
-/* Card shadow hover effect */
-.card:hover {
-  transform: translateY(-10px);
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+/* Card Elevation + Animation on Hover */
+.card {
+  border-radius: 18px;
+  border: 0;
+  box-shadow: 0 4px 16px rgba(34,34,80,.10);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover, .card:focus-within {
+  box-shadow: 0 12px 28px 0 rgba(67, 126, 234, 0.20);
+  transform: translateY(-8px) scale(1.035);
+  z-index: 2;
+}
+
+/* Section reveal: animate.css or AOS library works with these */
+[data-aos] { opacity: 0; transition: opacity 0.4s; }
+[data-aos].aos-animate { opacity: 1; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 0 auto 2rem auto;
+  padding: 2rem 0 0 0;
+  width: 90%;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #677eea, #43cea2);
+  box-shadow:0 0 0 2px #fff;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.timeline-event {
+  width: 47%;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.timeline-event.left { left: 0; }
+.timeline-event.right { left: 53%; }
+.timeline-content {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 4px 20px rgba(67,126,234,.09);
+  position: relative;
+  border-left: 6px solid #43cea2;
+  z-index: 1;
+  margin-bottom: 1.2rem;
+  animation: fadeInUp 0.7s both;
+}
+@keyframes fadeInUp {
+  0% { opacity:0; transform: translateY(24px);}
+  100% {opacity:1; transform:translateY(0);}
+}
+@media (max-width: 992px) {
+  .timeline { width: 100%; }
+  .timeline-event, .timeline-event.right, .timeline-event.left { width: 100%; left: 0;}
+  .timeline::before { left: 10px; }
+  .timeline-content {margin-left: 44px;}
+}
+
+/* Resume Viewer Styles */
+.resume-frame {
+  border: 2px solid #677eea;
+  border-radius: 16px;
+  width: 100%;
+  height: 80vh;
+  background: #fff;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+  .resume-frame { height: 56vh;}
+}
+
+/* Responsive padding for fixed footer */
+body { padding-bottom: 60px; }
+
+/* Miscellaneous Enhancements */
+.btn-primary {
+  background: linear-gradient(90deg,#677eea,#43cea2 60%);
+  border: none;
+  font-weight:500;
+  box-shadow: 0 2px 8px rgba(67,126,234,.09);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(90deg,#43cea2,#677eea 80%);
+  color: #fff !important;
+  box-shadow: 0 5px 18px rgba(103,126,234,0.13);
+}
+h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; }
+
+/* Visually improve form elements */
+.form-control:focus {
+  border-color: #43cea2;
+  box-shadow: 0 0 4px #43cea241;
 }
