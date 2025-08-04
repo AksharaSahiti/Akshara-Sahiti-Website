@@ -12,56 +12,74 @@ body {
   100% {background-position:0% 50%;}
 }
 
-/* Navbar modern spacing and link styles */
+/* Reset margin, padding and height */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
 
-/* Ensure navbar actually uses fixed position (Bootstrap default) */
+/* DESKTOP NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 70px; /* or match your real navbar height */
+  height: 70px;
   z-index: 1050;
-}
-
-/* Only push down main content, not the footer/whole body */
-.main-content {
-  padding-top: 70px; /* Same as navbar height */
-padding-bottom: 80px;
-}
-
-.navbar-nav .nav-link {
-  font-weight: 600;
-  font-size: 1.07rem;
-  transition: color 0.3s ease-in-out;
-}
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: #43cea2 !important;
-}
-/* Desktop navbar: gradient and transparent background */
-.navbar {
   background: linear-gradient(90deg, #677eea, #43cea2);
-  box-shadow: none !important;
-  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: none;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: background-color 0.3s;
+  backdrop-filter: saturate(180%) blur(10px);
 }
 
-/* Mobile navbar collapse menu: solid background and padding */
-@media (max-width: 991.98px) {
+.navbar-brand {
+  font-weight: 900;
+  color: #fff !important;
+  font-size: 1.8rem;
+  letter-spacing: 0.07em;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 0.3);
+  flex-shrink: 0;
+}
+
+/* Desktop nav links */
+@media (min-width: 992px) {
   .navbar-collapse {
-    background: rgba(34, 40, 68, 0.97) !important;  /* solid dark blue */
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .navbar-nav {
+    flex-wrap: nowrap;
+  }
+  .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8) !important;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 1.03rem;
+    padding: 10px 1rem;
+    transition: color 0.3s;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    color: #ddeeff !important;
+    text-shadow: 0 0 8px #ddeeff;
+    border-bottom: 2px solid #ddeeff;
+    background: none;
+  }
+}
+
+/* MOBILE NAVIGATION (<= 991px) */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(34, 40, 68, 0.97) !important;
     border-radius: 12px;
     margin-top: 8px;
     padding-bottom: 8px;
     box-shadow: 0 8px 32px rgba(34, 40, 100, 0.12);
   }
-  .navbar-collapse .nav-link {
+  .navbar-nav .nav-link {
     color: #fff !important;
     font-size: 1.18rem;
     margin: 8px 0;
@@ -71,26 +89,48 @@ padding-bottom: 80px;
     padding-left: 18px;
     padding-right: 18px;
   }
-  .navbar-collapse .nav-link:hover,
-  .navbar-collapse .nav-link.active {
-    background: linear-gradient(90deg, #52c8fb, #677eea 70%);
+  .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    background: linear-gradient(90deg,#52c8fb,#677eea 70%);
     color: #fff !important;
+    border-bottom: none;
+    text-shadow: none;
   }
 }
 
-/* Fixed Footer: visually light, always at bottom */
+.navbar-toggler {
+  border-color: transparent;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Only push down main content, not the footer/whole body */
+.main-content {
+  padding-top: 70px; /* Same as navbar height */
+  padding-bottom: 80px;
+}
+
+/* Fixed Footer styles */
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   z-index: 1050;
   border-top: 1px solid #555;
-  background-color: #222;     /* Solid dark gray/black background */
-  color: #ccc;               /* Light contrasting text */
+  background-color: #222;
+  color: #ccc;
   font-size: 1rem;
   height: 30px;
   line-height: 30px;
-text-align: center;
+  text-align: center;
+}
+footer a {
+  color: #ddd;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 /* Profile image/hero enhancements */
@@ -177,9 +217,6 @@ text-align: center;
   .resume-frame { height: 56vh;}
 }
 
-/* Responsive padding for fixed footer */
-body { padding-bottom: 60px; }
-
 /* Miscellaneous Enhancements */
 .btn-primary {
   background: linear-gradient(90deg,#677eea,#43cea2 60%);
@@ -199,113 +236,3 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
   border-color: #43cea2;
   box-shadow: 0 0 4px #43cea241;
 }
-/* Navbar enhancements for modern look and feel */
-.navbar {
-  background: linear-gradient(90deg, #677eea, #43cea2);
-  box-shadow: 0 4px 15px rgba(67,126,234,0.3);
-  transition: background-color 0.3s ease;
-  backdrop-filter: saturate(180%) blur(10px);
-}
-
-.navbar .navbar-brand {
-  font-weight: 900;
-  color: #ffffff !important;
-  font-size: 1.8rem;
-  letter-spacing: 0.07em;
-  text-shadow: 0 2px 4px rgb(0 0 0 / 0.3);
-  transition: color 0.3s ease;
-}
-
-.navbar .navbar-brand:hover {
-  color: #ddeeff !important;
-}
-
-.navbar-nav .nav-link {
-  color: rgba(255,255,255,0.8) !important;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  font-size: 1.03rem;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #ffffff !important;
-  text-shadow: 0 0 8px #ffffff;
-}
-
-.navbar-nav .nav-link.active {
-  color: #ddeeff !important;
-  text-shadow: 0 0 8px #ddeeff;
-  border-bottom: 2px solid #ddeeff;
-}
-
-.navbar-toggler {
-  border-color: transparent;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
-footer a {
-  color: #ddd;
-  text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-/* Prevent mobile nav menu from being transparent and too wide */
-.navbar-collapse {
-  background: rgba(34,40,68,0.97) !important;  /* solid/mostly opaque dark background */
-  border-radius: 12px;
-  margin-top: 8px;
-  padding-bottom: 8px;
-  box-shadow: 0 8px 32px rgba(34,40,100,0.12);
-}
-
-/* Make links in the mobile menu stand out */
-.navbar-collapse .nav-link {
-  color: #fff !important;
-  font-size: 1.18rem;
-  margin: 8px 0;
-  display: block;
-  text-align: left;
-  border-radius: 8px;
-  padding-left: 18px;
-  padding-right: 18px;
-}
-.navbar-collapse .nav-link:hover,
-.navbar-collapse .nav-link.active {
-  background: linear-gradient(90deg,#52c8fb,#677eea 70%);
-  color: #fff !important;
-}
-.navbar {
-  background: linear-gradient(90deg, #677eea, #43cea2);
-  box-shadow: none !important;
-  backdrop-filter: saturate(180%) blur(10px);
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.navbar-collapse {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.navbar-nav {
-  flex-wrap: nowrap;
-}
-
-.navbar-brand {
-  flex-shrink: 0;
-  font-weight: 900;
-}
-
-@media (min-width: 992px) {
-  .navbar-nav .nav-link {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
