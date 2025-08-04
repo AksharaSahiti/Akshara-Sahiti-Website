@@ -43,6 +43,40 @@ padding-bottom: 80px;
 .navbar-nav .nav-link.active {
   color: #43cea2 !important;
 }
+/* Desktop navbar: gradient and transparent background */
+.navbar {
+  background: linear-gradient(90deg, #677eea, #43cea2);
+  box-shadow: none !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Mobile navbar collapse menu: solid background and padding */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(34, 40, 68, 0.97) !important;  /* solid dark blue */
+    border-radius: 12px;
+    margin-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 8px 32px rgba(34, 40, 100, 0.12);
+  }
+  .navbar-collapse .nav-link {
+    color: #fff !important;
+    font-size: 1.18rem;
+    margin: 8px 0;
+    display: block;
+    text-align: left;
+    border-radius: 8px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .navbar-collapse .nav-link:hover,
+  .navbar-collapse .nav-link.active {
+    background: linear-gradient(90deg, #52c8fb, #677eea 70%);
+    color: #fff !important;
+  }
+}
 
 /* Fixed Footer: visually light, always at bottom */
 footer {
