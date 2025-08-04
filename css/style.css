@@ -136,3 +136,52 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
   border-color: #43cea2;
   box-shadow: 0 0 4px #43cea241;
 }
+/* Navbar enhancements for modern look and feel */
+.navbar {
+  background: linear-gradient(90deg, #677eea, #43cea2);
+  box-shadow: 0 4px 15px rgba(67,126,234,0.3);
+  transition: background-color 0.3s ease;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.navbar .navbar-brand {
+  font-weight: 900;
+  color: #ffffff !important;
+  font-size: 1.8rem;
+  letter-spacing: 0.07em;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 0.3);
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ddeeff !important;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  font-size: 1.03rem;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px #ffffff;
+}
+
+.navbar-nav .nav-link.active {
+  color: #ddeeff !important;
+  text-shadow: 0 0 8px #ddeeff;
+  border-bottom: 2px solid #ddeeff;
+}
+
+.navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 0.8)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
