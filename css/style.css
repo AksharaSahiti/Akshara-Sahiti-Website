@@ -246,3 +246,32 @@ footer a:hover {
   background: linear-gradient(90deg,#52c8fb,#677eea 70%);
   color: #fff !important;
 }
+.navbar {
+  background: linear-gradient(90deg, #677eea, #43cea2);
+  box-shadow: none !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.navbar-collapse {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar-nav {
+  flex-wrap: nowrap;
+}
+
+.navbar-brand {
+  flex-shrink: 0;
+  font-weight: 900;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
