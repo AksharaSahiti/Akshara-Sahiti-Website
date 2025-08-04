@@ -236,3 +236,13 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
   border-color: #43cea2;
   box-shadow: 0 0 4px #43cea241;
 }
+@media (max-width: 991px) {
+  /* Decrease navbar height to 60px on mobile */
+  .navbar {
+    height: 60px;
+  }
+  /* Adjust padding so content starts just below navbar */
+  .main-content {
+    padding-top: 60px;
+  }
+}
