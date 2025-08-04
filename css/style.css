@@ -13,8 +13,8 @@ body {
 }
 
 /* Navbar modern spacing and link styles */
-body, main, .container {
-  padding-top: 70px !important; /* Adjust if your navbar is taller/shorter */
+.main-content {
+  padding-top: 70px; /* Adjust this to match your navbar height */
 }
 
 .navbar {
