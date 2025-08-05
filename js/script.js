@@ -19,3 +19,23 @@ for (const link of links) {
     }
   });
 }
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom >= 0
+  );
+}
+
+function animateSkillBars() {
+  const bars = document.querySelectorAll('.skill-progress');
+  bars.forEach(bar => {
+    if (isInViewport(bar) && !bar.classList.contains('animated')) {
+      bar.classList.add('animated');
+      bar.style.width = bar.style.getPropertyValue('--skill-level');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('load', animateSkillBars);
