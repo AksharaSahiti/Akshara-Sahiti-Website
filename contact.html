@@ -51,29 +51,34 @@
 </nav>
 
 
-<main class="container main-content contact-container">
-<div class="contact-center">
-  <h1 class="mb-4 text-center">Contact Me</h1>
-  <p class="text-center">You can reach me at <a href="mailto:aksharaofc@gmail.com">aksharaofc@gmail.com</a></p>
-
-  <form action="https://formspree.io/f/xzzvjegj" method="POST" class="mx-auto" style="max-width: 500px;" >
-    <div class="mb-3">
-      <label for="email" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+<main class="container main-content">
+  <div class="contact-center">
+    <h1 class="mb-4 text-center">Contact Me</h1>
+    <p class="mb-4 text-center">
+      You can reach me at <a href="mailto:aksharaofc@gmail.com">aksharaofc@gmail.com</a>
+    </p>
+    <form action="https://formspree.io/f/xzzvjegj" method="POST">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100" style="margin-bottom: 10px;">Send</button>
+    </form>
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/akshara-sahiti/" target="_blank" class="me-3">
+        <i class="bi bi-linkedin" style="font-size: 1.7rem;"></i>
+      </a>
+      <a href="https://github.com/AksharaSahiti" target="_blank">
+        <i class="bi bi-github" style="font-size: 1.7rem;"></i>
+      </a>
     </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Your message"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary w-100">Send</button>
-  </form>
-
-  <div class="text-center mt-4">
-    <a href="https://www.linkedin.com/in/akshara-sahiti/" target="_blank" class="me-3"><i class="bi bi-linkedin" style="font-size: 1.5rem;"></i></a>
-    <a href="https://github.com/AksharaSahiti" target="_blank"><i class="bi bi-github" style="font-size: 1.5rem;"></i></a>
- </div>
   </div>
 </main>
+
 
 
  <footer class="fixed-bottom text-center text-light mt-4 opacity-75">&copy; 2025 Akshara Sahiti. All rights reserved.</footer>
