@@ -12,7 +12,7 @@ body {
   100% {background-position:0% 50%;}
 }
 body {
-  cursor: url('assets/paw.svg'), auto;
+  cursor: url('assets/paw.cur'), auto;
 }
 
 /* Reset margin, padding and height */
