@@ -309,6 +309,13 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
   width: 0;
   border-radius: 20px;
   animation: fillBar 2s ease forwards;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
 }
 @keyframes fillBar {
   to { width: var(--skill-level); }
