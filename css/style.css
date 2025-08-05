@@ -259,12 +259,25 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
 .contact-center {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 65vh; /* adjust to achieve best visual centering */
+  align-items: center;
+  min-height: 70vh; /* Vertically centered */
   width: 100%;
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
+
+.contact-center form {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.contact-center .social-links {
+  margin-top: 30px;
+}
+
 
 @media (min-width: 768px) {
   .contact-center {
