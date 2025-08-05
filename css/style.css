@@ -290,4 +290,27 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
     min-height: 65vh;
   }
 }
+.skill-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.skill-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #677eea, #43cea2);
+  width: 0;
+  border-radius: 20px;
+  animation: fillBar 2s ease forwards;
+}
+@keyframes fillBar {
+  to { width: var(--skill-level); }
+}
 
