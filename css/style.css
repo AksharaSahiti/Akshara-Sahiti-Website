@@ -256,4 +256,19 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
     text-align: center;
   }
 }
+.contact-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 65vh; /* adjust to achieve best visual centering */
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contact-center {
+    min-height: 65vh;
+  }
+}
 
