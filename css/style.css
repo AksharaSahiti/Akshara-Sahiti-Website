@@ -324,34 +324,144 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
 @keyframes fillBar {
   to { width: var(--skill-level); }
 }
+/* Dark Mode Styles */
 body.dark-mode {
   background: #191c21 !important;
   color: #eee !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
+
+/* Navbar in dark mode */
 body.dark-mode .navbar,
 body.dark-mode .navbar-light.bg-light {
   background: #222a36 !important;
-  box-shadow: 0 4px 16px rgba(34,40,100,0.15);
+  box-shadow: 0 4px 16px rgba(34, 40, 100, 0.15);
+  transition: background-color 0.4s ease;
 }
+
+/* Navbar brand and nav links */
 body.dark-mode .navbar-brand,
 body.dark-mode .nav-link {
   color: #eee !important;
+  transition: color 0.4s ease;
 }
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+  color: #a0d8ef !important;
+  text-shadow: 0 0 8px #a0d8ef;
+  border-bottom: 2px solid #a0d8ef;
+}
+
+/* Toggle button in dark mode */
 body.dark-mode .btn-outline-light {
   border-color: #43cea2;
   color: #43cea2;
   background: #232a37;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }
-body.dark-mode .btn-outline-light:hover {
+
+body.dark-mode .btn-outline-light:hover,
+body.dark-mode .btn-outline-light:focus {
   background: #43cea2;
   color: #fff;
+  outline: none;
+  box-shadow: 0 0 8px #43cea2;
 }
+
+/* Cards in dark mode */
 body.dark-mode .card {
   background: #232a37 !important;
   color: #eee !important;
   border-color: #323746 !important;
+  box-shadow: 0 4px 20px rgba(67, 126, 234, 0.15);
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
 }
 
+/* Cards hover effect in dark mode */
+body.dark-mode .card:hover, 
+body.dark-mode .card:focus-within {
+  box-shadow: 0 12px 28px 0 rgba(67, 126, 234, 0.35);
+  transform: translateY(-8px) scale(1.035);
+  z-index: 2;
+}
 
+/* Footer in dark mode */
+body.dark-mode footer {
+  background-color: #1f2329;
+  border-top: 1px solid #555;
+  color: #bbb;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 
+body.dark-mode footer a {
+  color: #8ab9d6;
+}
 
+body.dark-mode footer a:hover {
+  color: #bde5ff;
+}
+
+/* Form controls in dark mode */
+body.dark-mode .form-control {
+  background-color: #2a2f3a;
+  color: #eee;
+  border: 1px solid #444;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Form control focus */
+body.dark-mode .form-control:focus {
+  border-color: #43cea2;
+  box-shadow: 0 0 6px #43cea241;
+  background-color: #2a2f3a;
+  color: #fff;
+}
+
+/* Links in dark mode */
+body.dark-mode a {
+  color: #70e1f5;
+  transition: color 0.4s ease;
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+  color: #a0d8ef;
+  text-decoration: underline;
+}
+
+/* Scrollbar styling for webkit browsers (optional) */
+body.dark-mode::-webkit-scrollbar {
+  width: 8px;
+}
+body.dark-mode::-webkit-scrollbar-track {
+  background: #1a1d23;
+}
+body.dark-mode::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #43cea2, #677eea);
+  border-radius: 8px;
+}
+
+/* Skill bar text contrast in dark mode */
+body.dark-mode .skill-progress::after {
+  color: #d0f0ff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Timeline content in dark mode */
+body.dark-mode .timeline-content {
+  background: #232a37;
+  border-left-color: #43cea2;
+  color: #eee;
+  box-shadow: 0 4px 20px rgba(67, 126, 234, 0.15);
+  transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+/* Contact center background adjustment (if needed) */
+body.dark-mode .contact-center {
+  /* add if you want subtle background for the contact section */
+  background-color: rgba(35, 42, 55, 0.8);
+  border-radius: 12px;
+  padding: 20px;
+  transition: background-color 0.4s ease;
+}
