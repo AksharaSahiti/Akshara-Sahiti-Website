@@ -36,6 +36,10 @@ function animateSkillBars() {
     }
   });
 }
+document.getElementById('themeToggle').onclick = function() {
+  document.body.classList.toggle('dark-mode');
+}
+
 
 window.addEventListener('scroll', animateSkillBars);
 window.addEventListener('load', animateSkillBars);
