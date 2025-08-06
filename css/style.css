@@ -324,16 +324,34 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
 @keyframes fillBar {
   to { width: var(--skill-level); }
 }
-.dark-mode {
-  background: #181b21 !important;
+body.dark-mode {
+  background: #191c21 !important;
   color: #eee !important;
 }
-.dark-mode .card {
-  background: #23272f;
-  color: #eee;
-  border-color: #323746;
+body.dark-mode .navbar,
+body.dark-mode .navbar-light.bg-light {
+  background: #222a36 !important;
+  box-shadow: 0 4px 16px rgba(34,40,100,0.15);
 }
-/* Add more .dark-mode rules as needed */
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #eee !important;
+}
+body.dark-mode .btn-outline-light {
+  border-color: #43cea2;
+  color: #43cea2;
+  background: #232a37;
+}
+body.dark-mode .btn-outline-light:hover {
+  background: #43cea2;
+  color: #fff;
+}
+body.dark-mode .card {
+  background: #232a37 !important;
+  color: #eee !important;
+  border-color: #323746 !important;
+}
+
 
 
 
