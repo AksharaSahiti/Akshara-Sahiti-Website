@@ -451,13 +451,12 @@ body.dark-mode .contact-center {
   transition: background-color 0.4s ease;
 }
 #themeToggle:focus,
-#themeToggle:active {
-  outline: none;
-  box-shadow: none;
-}
-body.dark-mode .btn-outline-light:focus,
-body.dark-mode .btn-outline-light:active {
-  outline: none;
-  box-shadow: none;
+#themeToggle:active,
+#themeToggle:focus-visible,
+.btn-outline-light:focus,
+.btn-outline-light:active,
+.btn-outline-light:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
