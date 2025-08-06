@@ -324,5 +324,16 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
 @keyframes fillBar {
   to { width: var(--skill-level); }
 }
+.dark-mode {
+  background: #181b21 !important;
+  color: #eee !important;
+}
+.dark-mode .card {
+  background: #23272f;
+  color: #eee;
+  border-color: #323746;
+}
+/* Add more .dark-mode rules as needed */
+
 
 
