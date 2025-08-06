@@ -40,6 +40,19 @@ function animateSkillBars() {
     }
   });
 }
+document.addEventListener("DOMContentLoaded", function () {
+  new Typed("#typewriter", {
+    strings: [
+      "Business Analyst",
+      "PowerBI Developer",
+      "Project Coordinator",
+      "Freelancer
+    ],
+    typeSpeed: 65,
+    backSpeed: 50,
+    loop: true
+  });
+});
 
 // Run animation on scroll and page load
 window.addEventListener('scroll', animateSkillBars);
