@@ -354,21 +354,6 @@ body.dark-mode .nav-link.active {
 }
 
 /* Toggle button in dark mode */
-body.dark-mode .btn-outline-light {
-  border-color: #43cea2;
-  color: #43cea2;
-  background: #232a37;
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-}
-
-body.dark-mode .btn-outline-light:hover,
-body.dark-mode .btn-outline-light:focus {
-  background: #43cea2;
-  color: #fff;
-  outline: none;
-  box-shadow: 0 0 8px #43cea2;
-}
-
 /* Cards in dark mode */
 body.dark-mode .card {
   background: #232a37 !important;
