@@ -1,23 +1,22 @@
-// --- DARK MODE TOGGLE WITH LOCALSTORAGE PERSISTENCE ---
-const toggle = document.querySelector('#themeToggle');
+// --- DARK MODE TOGGLE WITH LOCALSTORAGE PERSISTENCE (SLIDER SWITCH) ---
+const themeSwitch = document.querySelector('#themeToggleSwitch');
 
 // On page load, apply dark mode if previously enabled
 document.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('darkMode') === 'on') {
     document.body.classList.add('dark-mode');
-    if (toggle) toggle.textContent = "☀️";
-  } else if (toggle) {
-    toggle.textContent = "🌙";
+    if (themeSwitch) themeSwitch.checked = true;
+  } else if (themeSwitch) {
+    themeSwitch.checked = false;
   }
 });
 
 // Toggle dark mode and save preference
-if (toggle) {
-  toggle.addEventListener('click', () => {
+if (themeSwitch) {
+  themeSwitch.addEventListener('change', () => {
     document.body.classList.toggle('dark-mode');
     const isDark = document.body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', isDark ? 'on' : 'off');
-    toggle.textContent = isDark ? "☀️" : "🌙";
   });
 }
 
