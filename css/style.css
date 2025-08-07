@@ -564,49 +564,46 @@ input:checked + .slider:before {
   50% { opacity: 0; }
 }
 
-/* About page highlighted professional summary with strong contrast */
+/* About page highlight with outline only, no background fill */
 .about-highlight {
-  background: rgba(10, 24, 40, 0.85);        /* Dark semi-transparent overlay for contrast */
-  border-left: 6px solid #43cea2;            /* Accent left border with your theme color */
-  color: #ffffff;                            /* Bright white text */
-  padding: 24px 32px;                        /* Comfortable padding */
-  border-radius: 16px;                       /* Rounded corners */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);  /* Subtle shadow to lift the block */
-  font-size: 1.25rem;                        /* Larger font size for easier reading */
-  font-weight: 700;                          /* Bold text weight */
-  line-height: 1.6;                          /* Line height for legibility */
-  max-width: 900px;                          /* Restrict maximum width for better structure */
-  margin: 2rem auto;                         /* Center horizontally with vertical spacing */
-  text-align: center;                        /* Center aligned text */
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Consistent font */
-  transition: box-shadow 0.3s ease;          /* Smooth hover effect */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7); /* Subtle text shadow for readability */
+  border: 2px solid #43cea2;   /* Accent color outline */
+  padding: 16px 24px;          /* Comfortable padding */
+  border-radius: 12px;         /* Rounded corners */
+  color: #ffffff;              /* White text */
+  font-size: 1.25rem;          /* Slightly larger font */
+  font-weight: 600;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+  background: transparent;     /* Transparent background to preserve gradient */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);  /* Subtle shadow for readability */
+
+  transition: border-color 0.3s ease;
 }
 
-/* Accent important keywords inside highlight block */
-.about-highlight strong {
-  color: #e0f7fa;                           /* Lighter cyan accent color */
-  font-weight: 700;
-  text-shadow: 0 0 8px rgba(224, 247, 250, 0.7);
-}
-
-/* Muted style for emphasized or italicized text */
-.about-highlight em {
-  font-style: italic;
-  color: #a3bffa;                            /* Soft blue shade */
-}
-
-/* Hover or focus effect for subtle interaction */
 .about-highlight:hover,
 .about-highlight:focus {
-  box-shadow: 0 12px 36px rgba(67, 126, 234, 0.35);
+  border-color: #67d3b8;       /* Slightly lighter accent on hover/focus */
 }
 
-/* Responsive adjustment for smaller screens */
+.about-highlight strong {
+  color: #43cea2;              /* Accent color for keywords */
+  font-weight: 700;
+}
+
+.about-highlight em {
+  font-style: italic;
+  color: #9cd8d2;              /* Muted accent for italic text */
+}
+
+/* Responsive: smaller font and padding on narrow screens */
 @media (max-width: 767px) {
   .about-highlight {
     font-size: 1.1rem;
-    padding: 20px 24px;
+    padding: 14px 18px;
     margin: 1.5rem 1rem;
   }
 }
