@@ -566,7 +566,7 @@ input:checked + .slider:before {
 
 /* About page highlight with outline only, no background fill */
 .about-highlight {
-  border: 1px solid #000000;    /* Thin black border */
+  border: 1px solid #000000;       /* Thin black border */
   padding: 16px 24px;
   border-radius: 12px;
   color: #ffffff;
@@ -577,25 +577,33 @@ input:checked + .slider:before {
   margin: 2rem auto;
   text-align: center;
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  
   background: transparent;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-
+  
   transition: border-color 0.3s ease;
 }
 
 .about-highlight:hover,
 .about-highlight:focus {
-  border-color: #333333;        /* Slightly lighter black on hover/focus */
+  border-color: #333333; /* Slightly lighter black on hover */
 }
 
-/* Highlighted keywords: brighter and bolder */
 .about-highlight strong {
-  color: #00ffcc;               /* Bright cyan/teal for high contrast */
-  font-weight: 800;
-  text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
+  color: #000000;           /* Dark black for highlighted words */
+  font-weight: 700;
 }
 
 .about-highlight em {
   font-style: italic;
-  color: #a0e5d6;               /* Muted teal shade for emphasis */
+  color: #9cd8d2;           /* Keep muted accent for italics, or change if you want */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .about-highlight {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+    margin: 1.5rem 1rem;
+  }
 }
