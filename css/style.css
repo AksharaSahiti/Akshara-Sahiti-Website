@@ -505,6 +505,17 @@ input:checked + .slider:before {
   background: #232a37;
   color: #ffd600;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 28px;
+  vertical-align: middle;
+  margin-left: 1rem;
+
+  /* vertical center tweak */
+  transform: translateY(2px);
+}
 
 #themeToggle:focus,
 #themeToggle:active,
