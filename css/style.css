@@ -533,10 +533,10 @@ input:checked + .slider:before {
 
 /* About highlight: thin outline with accent colors */
 .about-highlight {
-  border: 1px solid #444444 !important; /* Soft dark gray outline */
+  border: 1px solid #444444 !important;      /* Soft dark gray border */
   padding: 16px 24px;
   border-radius: 12px;
-  color: #ffffff !important; /* Main text in white */
+  color: #ffffff !important;                  /* White main text */
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.6;
@@ -548,19 +548,25 @@ input:checked + .slider:before {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   transition: border-color 0.3s ease;
 }
+
 .about-highlight:hover,
 .about-highlight:focus {
-  border-color: #666666 !important; /* Lighter border on hover */
+  border-color: #666666 !important;
 }
+
+/* Softer black/dark gray for important strong text */
 .about-highlight strong {
-  color: #222222 !important; /* Dark gray for strong text */
+  color: #4a4a4a !important;                  /* Medium dark gray, gentler than #222 */
   font-weight: 700;
 }
+
+/* Clear, vibrant but distinctly blue color for emphasis */
 .about-highlight em {
   font-style: italic;
-  color: #43cea2 !important; /* Blue accent for <em> text */
+  color: rgb(30, 144, 255) !important;       /* DodgerBlue */
 }
-/* Responsive style */
+
+/* Responsive adjustment */
 @media (max-width: 767px) {
   .about-highlight {
     font-size: 1.1rem;
@@ -568,3 +574,4 @@ input:checked + .slider:before {
     margin: 1.5rem 1rem;
   }
 }
+
