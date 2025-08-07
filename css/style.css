@@ -533,8 +533,25 @@ input:checked + .slider:before {
 
 /* Typewriter style */
 #typewriter {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 1.5rem;          /* Adjust as desired */
+  font-weight: 600;
   color: #43cea2;
+  margin-top: 8px;
+  min-height: 1.8em;          /* Prevents layout jump */
   white-space: nowrap;
+  letter-spacing: 0.03em;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
+
+/* Optional: Style the blinking cursor */
+.typed-cursor {
+  font-weight: 700;
+  color: #43cea2;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
