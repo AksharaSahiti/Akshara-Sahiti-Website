@@ -166,9 +166,14 @@ footer a:hover {
   z-index: 2;
 }
 
-/* Section reveal */
-[data-aos] { opacity: 0; transition: opacity 0.4s; }
-[data-aos].aos-animate { opacity: 1; }
+/* Section reveal: animate.css or AOS library works with these */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+[data-aos].aos-animate {
+  opacity: 1;
+}
 
 /* Timeline */
 .timeline {
@@ -243,7 +248,9 @@ footer a:hover {
   color: #fff !important;
   box-shadow: 0 5px 18px rgba(103,126,234,0.13);
 }
-h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; }
+h1, h2, h3, h4 {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
 
 /* Visually improve form elements */
 .form-control:focus {
@@ -251,9 +258,11 @@ h1, h2, h3, h4 { font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, san
   box-shadow: 0 0 4px #43cea241;
 }
 @media (max-width: 991px) {
+  /* Decrease navbar height to 60px on mobile */
   .navbar {
     height: 60px;
   }
+  /* Adjust padding so content starts just below navbar */
   .main-content {
     padding-top: 60px;
   }
@@ -543,7 +552,7 @@ input:checked + .slider:before {
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Optional: Style the blinking cursor */
+/* Optional: Style the blinking cursor for typewriter */
 .typed-cursor {
   font-weight: 700;
   color: #43cea2;
@@ -555,3 +564,47 @@ input:checked + .slider:before {
   50% { opacity: 0; }
 }
 
+/* About page highlighted professional summary */
+.about-highlight {
+  background: linear-gradient(90deg, #43cea2, #677eea);
+  color: white;
+  padding: 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(67, 126, 234, 0.2);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover or focus effect for subtle interaction */
+.about-highlight:hover,
+.about-highlight:focus {
+  box-shadow: 0 12px 36px rgba(67, 126, 234, 0.35);
+}
+
+/* Highlight important keywords */
+.about-highlight strong {
+  color: #e0f7fa;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(224, 247, 250, 0.7);
+}
+
+/* Muted style for sector name/abbr */
+.about-highlight em {
+  font-style: italic;
+  color: #a3bffa;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+  .about-highlight {
+    font-size: 1.1rem;
+    padding: 20px 24px;
+    margin: 1.5rem 1rem;
+  }
+}
