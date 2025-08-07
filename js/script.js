@@ -1,14 +1,27 @@
-// Dark mode toggle
+// --- DARK MODE TOGGLE WITH LOCALSTORAGE PERSISTENCE ---
 const toggle = document.querySelector('#themeToggle');
+
+// On page load, apply dark mode if previously enabled
+document.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('darkMode') === 'on') {
+    document.body.classList.add('dark-mode');
+    if (toggle) toggle.textContent = "☀️";
+  } else if (toggle) {
+    toggle.textContent = "🌙";
+  }
+});
+
+// Toggle dark mode and save preference
 if (toggle) {
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    // Optional: Change button icon between moon and sun
-    toggle.textContent = document.body.classList.contains('dark-mode') ? "☀️" : "🌙";
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+    toggle.textContent = isDark ? "☀️" : "🌙";
   });
 }
 
-// Smooth scroll for anchor links
+// --- SMOOTH SCROLL FOR ANCHOR LINKS ---
 const links = document.querySelectorAll('a[href^="#"]');
 for (const link of links) {
   link.addEventListener('click', function (e) {
@@ -21,7 +34,7 @@ for (const link of links) {
   });
 }
 
-// Helper function to check if element is in viewport
+// --- SKILL BAR ANIMATION IN VIEWPORT ---
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
@@ -30,7 +43,6 @@ function isInViewport(el) {
   );
 }
 
-// Animate skill bars when they enter the viewport
 function animateSkillBars() {
   const bars = document.querySelectorAll('.skill-progress');
   bars.forEach(bar => {
@@ -41,6 +53,5 @@ function animateSkillBars() {
   });
 }
 
-// Run animation on scroll and page load
 window.addEventListener('scroll', animateSkillBars);
 window.addEventListener('load', animateSkillBars);
