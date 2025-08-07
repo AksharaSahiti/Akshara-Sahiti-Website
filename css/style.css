@@ -565,11 +565,12 @@ input:checked + .slider:before {
 }
 
 /* About page highlight with outline only, no background fill */
+/* About highlight container */
 .about-highlight {
-  border: 1px solid #222222;       /* Dark gray border, softer than black */
+  border: 1px solid #444444 !important;      /* Softer dark gray outline */
   padding: 16px 24px;
   border-radius: 12px;
-  color: #ffffff;
+  color: #ffffff !important;                  /* White main text */
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.6;
@@ -577,29 +578,30 @@ input:checked + .slider:before {
   margin: 2rem auto;
   text-align: center;
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-
-  background: transparent;
+  background: transparent !important;         /* Make sure no background */
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-
   transition: border-color 0.3s ease;
 }
 
+/* Border color on hover/focus */
 .about-highlight:hover,
 .about-highlight:focus {
-  border-color: #444444;  /* Slightly lighter on hover */
+  border-color: #666666 !important;
 }
 
+/* Strong text */
 .about-highlight strong {
-  color: #323232;           /* Dark gray, softer than pure black */
+  color: #222222 !important;                  /* Dark gray, not pure black */
   font-weight: 700;
 }
 
+/* Emphasized text like EPCI and with impact */
 .about-highlight em {
   font-style: italic;
-  color: #43cea2;           /* Blue accent color matching your theme */
+  color: #43cea2 !important;                   /* Your blue accent */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustment */
 @media (max-width: 767px) {
   .about-highlight {
     font-size: 1.1rem;
@@ -607,4 +609,3 @@ input:checked + .slider:before {
     margin: 1.5rem 1rem;
   }
 }
-
