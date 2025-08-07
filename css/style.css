@@ -558,6 +558,7 @@ input:checked + .slider:before {
 .about-highlight strong {
   color: #4a4a4a !important;                  /* Medium dark gray, gentler than #222 */
   font-weight: 700;
+  text-shadow: none !important;
 }
 
 /* Clear, vibrant but distinctly blue color for emphasis */
