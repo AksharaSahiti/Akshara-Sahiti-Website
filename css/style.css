@@ -566,7 +566,7 @@ input:checked + .slider:before {
 
 /* About page highlight with outline only, no background fill */
 .about-highlight {
-  border: 1px solid #000000;       /* Thin black border */
+  border: 1px solid #222222;       /* Dark gray border, softer than black */
   padding: 16px 24px;
   border-radius: 12px;
   color: #ffffff;
@@ -577,26 +577,26 @@ input:checked + .slider:before {
   margin: 2rem auto;
   text-align: center;
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  
+
   background: transparent;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
-  
+
   transition: border-color 0.3s ease;
 }
 
 .about-highlight:hover,
 .about-highlight:focus {
-  border-color: #333333; /* Slightly lighter black on hover */
+  border-color: #444444;  /* Slightly lighter on hover */
 }
 
 .about-highlight strong {
-  color: #000000;           /* Dark black for highlighted words */
+  color: #323232;           /* Dark gray, softer than pure black */
   font-weight: 700;
 }
 
 .about-highlight em {
   font-style: italic;
-  color: #9cd8d2;           /* Keep muted accent for italics, or change if you want */
+  color: #43cea2;           /* Blue accent color matching your theme */
 }
 
 /* Responsive adjustments */
@@ -607,3 +607,4 @@ input:checked + .slider:before {
     margin: 1.5rem 1rem;
   }
 }
+
