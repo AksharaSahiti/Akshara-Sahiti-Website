@@ -925,3 +925,74 @@ body.dark-mode .cert-card {
   box-shadow: 0 8px 24px rgba(67, 126, 234, 0.18);
   transition: all 0.3s ease;
 }
+
+/* --- Added Enhancements --- */
+
+.main-content {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.certifications {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 2rem 1rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+body.dark-mode .certifications {
+    background: rgba(35, 42, 55, 0.9);
+}
+
+.cert-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.cert-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    flex: 1;
+}
+.cert-grid::-webkit-scrollbar { display: none; }
+.cert-card {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    background: rgba(255, 255, 255, 0.92);
+    color: #202940;
+    border-radius: 14px;
+    padding: 1.6rem;
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+body.dark-mode .cert-card {
+    background: rgba(35, 42, 55, 0.92);
+    color: #ffffff;
+}
+
+.timeline-content {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.timeline-content:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #43cea2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
