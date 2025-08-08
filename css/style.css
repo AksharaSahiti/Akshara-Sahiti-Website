@@ -795,12 +795,12 @@ body.dark-mode .timeline-content p {
 
 /* --- Certifications Grid & Cards --- */
 .certifications {
-  max-width: 1000px;
-  margin: 4rem auto !important;
-  padding: 0 1.5rem 2rem;
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  background: transparent !important;
-  box-shadow: none !important;
+  background: #f8f9fa; /* light solid background */
+  border-radius: 12px;
+  padding: 2rem;
+}
+body.dark-mode .certifications {
+  background: #232a37; /* dark mode match */
 }
 .section-title {
   font-size: 2rem;
