@@ -795,12 +795,16 @@ body.dark-mode .timeline-content p {
 
 /* --- Certifications Grid & Cards --- */
 .certifications {
-  background: #f8f9fa; /* light solid background */
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92); /* light solid background */
+  border-radius: 16px;
   padding: 2rem;
+  max-width: 1000px;
+  margin: 4rem auto;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
+
 body.dark-mode .certifications {
-  background: #232a37; /* dark mode match */
+  background: rgba(35, 42, 55, 0.95); /* match dark mode */
 }
 .section-title {
   font-size: 2rem;
