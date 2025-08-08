@@ -119,7 +119,7 @@ html, body {
 /* Main content padding to offset fixed navbar */
 .main-content {
   padding-top: 70px; /* Matches navbar height */
-  padding-bottom: 20px;
+  padding-bottom: 0px;
 }
 
 /* Fixed Footer */
