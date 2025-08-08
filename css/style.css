@@ -118,8 +118,8 @@ html, body {
 
 /* Main content padding to offset fixed navbar */
 .main-content {
-  padding-top: 70px; /* Matches navbar height */
-  padding-bottom: 0px;
+  padding-bottom: 30px !important; /* Match the footer's height */
+  margin-bottom: 0 !important;
 }
 
 /* Fixed Footer */
@@ -639,8 +639,9 @@ input:checked + .slider:before {
 }
 .certifications {
   max-width: 900px;
-  margin: 3rem auto;
+  margin: 0 !important;
   padding: 0 1rem;
+  padding-bottom: 0 !important;
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -707,7 +708,9 @@ input:checked + .slider:before {
 .about-intro {
   max-width: 900px;
   margin: 0 auto 0;
-  padding: 0 1.4rem;
+  padding: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .about-intro-inner {
