@@ -118,7 +118,7 @@ html, body {
 
 /* Main content padding to offset fixed navbar */
 .main-content {
-  padding-bottom: 30px !important; /* Match the footer's height */
+  padding-bottom: 0px !important; /* Match the footer's height */
   margin-bottom: 0 !important;
 }
 
@@ -253,14 +253,22 @@ footer a:hover {
 }
 
 .skill {
-  background-color: #43cea2;
-  color: #fff;
-  padding: 6px 12px;
-  font-size: 0.9rem;
+  background: #fff;                 /* white background */
+  color: #222;                      /* black text */
+  border: 2px solid #43cea2;        /* green border */
   border-radius: 12px;
   font-weight: 600;
-  box-shadow: 0 2px 6px rgba(67, 206, 162, 0.3);
+  font-size: 0.95rem;
+  padding: 7px 14px;
+  box-shadow: 0 1px 4px rgba(67,206,162,0.06);
+  margin: 3px 5px;
+  display: inline-block;
   user-select: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+body.dark-mode .skill {
+  background: #43cea2 !important;   /* green background in dark mode */
+  color: #fff !important;           /* white text */
 }
 
 /* Fade in animation for timeline */
@@ -341,9 +349,10 @@ h1, h2, h3, h4 {
   .navbar {
     height: 60px;
   }
-  .main-content {
-    padding-top: 60px;
-  }
+ .main-content {
+  padding-bottom: 30px !important;   /* Just high enough for the fixed footer */
+  margin-bottom: 0 !important;
+}
   .contact-container {
     display: flex;
     flex-direction: column;
@@ -501,7 +510,7 @@ body.dark-mode .skill-progress::after {
 body.dark-mode .timeline-content {
   background: #232a37;
   border-left-color: #43cea2;
-  color: #eee;
+  color: #fff !important;
   box-shadow: 0 4px 20px rgba(67,126,234,0.15);
   transition: background-color 0.4s ease, border-color 0.4s ease, color 0.4s ease;
 }
@@ -657,8 +666,7 @@ input:checked + .slider:before {
 
 .cert-grid {
   display: grid;
-  gap: 1.8rem;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  justify-items: center;
 }
 
 .cert-card {
@@ -717,7 +725,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 0rem;
   border-radius: 20px;
   background: rgba(255,255,255,0.025);
   box-shadow: 0 4px 24px rgba(67, 126, 234, 0.12);
@@ -739,7 +747,7 @@ input:checked + .slider:before {
   font-size: 2.1rem;
   font-weight: 700;
   line-height: 1.18;
-  color: #fff;
+  color: #fff !important;
   margin-bottom: 1.1rem;
   letter-spacing: -1px;
 }
@@ -748,11 +756,12 @@ input:checked + .slider:before {
   color: rgb(30, 144, 255); /* DodgerBlue for visual pop */
   font-weight: 700;
   transition: color 0.2s;
+  color: #fff !important;
 }
 
 .about-lead {
   font-size: 1.18rem;
-  color: #e3eefa;
+  color: #fff !important;
   margin-bottom: 0.6rem;
   font-weight: 500;
   line-height: 1.58;
@@ -760,7 +769,7 @@ input:checked + .slider:before {
 
 .about-support {
   font-size: 1.05rem;
-  color: #c3cede;
+ color: #fff !important;
   font-weight: 400;
   margin-bottom: 0;
   line-height: 1.55;
@@ -783,4 +792,9 @@ input:checked + .slider:before {
     width: 90px;
     height: 90px;
   }
+}
+body.dark-mode .cert-title,
+body.dark-mode .cert-org,
+body.dark-mode .cert-date {
+  color: #fff !important;
 }
