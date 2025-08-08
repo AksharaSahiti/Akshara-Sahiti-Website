@@ -706,54 +706,78 @@ input:checked + .slider:before {
 }
 .about-intro {
   max-width: 900px;
-  margin: 0 auto 3rem;
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  margin: 3.5rem auto 2.5rem;
+  padding: 0 1.4rem;
 }
 
-.about-image {
-  max-width: 220px;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+.about-intro-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.025);
+  box-shadow: 0 4px 24px rgba(67, 126, 234, 0.12);
+  padding: 2.8rem 2.6rem;
 }
 
-.about-text-box {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1.5px solid #43cea2;
-  border-radius: 16px;
-  padding: 2.2rem 2.6rem;
-  color: #e8f1f8;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.7;
-  box-shadow: 0 8px 30px rgba(67, 206, 162, 0.25);
-  transition: box-shadow 0.3s ease;
+/* If you use a profile photo, style it like this */
+.about-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(30,144,255, 0.13);
+  border: 3px solid #eaf6fb;
+  flex-shrink: 0;
 }
 
-.about-text-box:hover,
-.about-text-box:focus {
-  box-shadow: 0 12px 36px rgba(67, 206, 162, 0.45);
-}
-
-.about-text-box strong {
-  color: #222222;
+.about-headline {
+  font-size: 2.1rem;
   font-weight: 700;
-  text-shadow: none;
+  line-height: 1.18;
+  color: #fff;
+  margin-bottom: 1.1rem;
+  letter-spacing: -1px;
 }
 
-.about-text-box em {
-  font-style: italic;
-  color: rgb(30, 144, 255); /* DodgerBlue */
+.about-keyword {
+  color: rgb(30, 144, 255); /* DodgerBlue for visual pop */
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.about-lead {
+  font-size: 1.18rem;
+  color: #e3eefa;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  line-height: 1.58;
+}
+
+.about-support {
+  font-size: 1.05rem;
+  color: #c3cede;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 1.55;
 }
 
 @media (max-width: 767px) {
-  .about-intro {
-    padding: 0 1rem;
+  .about-intro-inner {
+    flex-direction: column;
+    padding: 1.6rem 1rem;
+    gap: 0.85rem;
   }
-  .about-text-box {
-    font-size: 1.1rem;
-    padding: 1.6rem 2rem;
+  .about-headline {
+    font-size: 1.25rem;
   }
-  .about-image {
-    max-width: 180px;
+  .about-lead,
+  .about-support {
+    font-size: 1rem;
+  }
+  .about-photo {
+    width: 90px;
+    height: 90px;
   }
 }
-
