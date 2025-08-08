@@ -817,21 +817,32 @@ body.dark-mode .certifications {
 }
 .cert-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* centers them horizontally */
-  gap: 2rem;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
 }
 .cert-card {
-  background: #fff !important;
-  color: #202940;
+  flex: 0 0 300px; /* fixed width for nice alignment */
+  scroll-snap-align: center;
+}
+.cert-grid::-webkit-scrollbar {
+  height: 8px;
+}
+.cert-grid::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.3);
+  border-radius: 4px;
+}
+
+.cert-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(4px);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(67, 126, 234, 0.12);
   text-align: center;
-  margin: 0 0 20px 0;
-  max-width: 350px;
-  min-width: 220px;
   padding: 1.8rem 1.4rem;
-  transition: box-shadow 0.3s, background 0.3s;
+  flex: 0 0 300px; /* for horizontal scrolling layout */
+  transition: box-shadow 0.3s;
 }
 .cert-card:hover,
 .cert-card:focus {
