@@ -118,7 +118,8 @@ html, body {
 
 /* Main content padding to offset fixed navbar */
 .main-content {
-  padding-bottom: 0px !important; /* Match the footer's height */
+  padding-top: 90px;
+  padding-bottom: 30px !important;
   margin-bottom: 0 !important;
 }
 
@@ -546,7 +547,7 @@ body.dark-mode .contact-center {
   box-shadow: 0 0 3px #8881;
 }
 .slider:before {
-  content: "🌙";
+  content: "ðŸŒ™";
   position: absolute;
   left: 4px;
   top: 3px;
@@ -564,7 +565,7 @@ input:checked + .slider {
   background-color: #43cea2;
 }
 input:checked + .slider:before {
-  content: "☀️";
+  content: "â˜€ï¸";
   transform: translateX(24px);
   background: #232a37;
   color: #ffd600;
@@ -794,12 +795,11 @@ body.dark-mode .timeline-content p {
 
 /* --- Certifications Grid & Cards --- */
 .certifications {
-  max-width: 900px;
-  margin: 0 !important;
-  padding: 0 1rem;
-  padding-bottom: 0 !important;
+  max-width: 1000px;
+  margin: 4rem auto !important;
+  padding: 0 1.5rem 2rem;
   font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  background: none !important; /* Kill any unwanted background/box */
+  background: transparent !important;
   box-shadow: none !important;
 }
 .section-title {
@@ -814,8 +814,8 @@ body.dark-mode .timeline-content p {
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.8rem;
-  justify-items: center;
+  gap: 2rem;
+  justify-content: center;
 }
 .cert-card {
   background: #fff !important;
@@ -867,5 +867,4 @@ body.dark-mode .cert-date {
     padding: 1.4rem 1rem;
   }
 }
-
 
