@@ -118,9 +118,11 @@ html, body {
 
 /* Main content padding to offset fixed navbar */
 .main-content {
-  padding-top: 90px;
-  padding-bottom: 30px !important;
+  padding-top: 92px; /* offset for fixed navbar */
+  padding-bottom: 38px !important; /* footer offset */
   margin-bottom: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Fixed Footer */
@@ -351,8 +353,11 @@ h1, h2, h3, h4 {
     height: 60px;
   }
  .main-content {
-  padding-bottom: 30px !important;   /* Just high enough for the fixed footer */
+  padding-top: 92px; /* offset for fixed navbar */
+  padding-bottom: 38px !important; /* footer offset */
   margin-bottom: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
 }
   .contact-container {
     display: flex;
@@ -547,7 +552,7 @@ body.dark-mode .contact-center {
   box-shadow: 0 0 3px #8881;
 }
 .slider:before {
-  content: "ðŸŒ™";
+  content: "🌙";
   position: absolute;
   left: 4px;
   top: 3px;
@@ -565,7 +570,7 @@ input:checked + .slider {
   background-color: #43cea2;
 }
 input:checked + .slider:before {
-  content: "â˜€ï¸";
+  content: "☀️";
   transform: translateX(24px);
   background: #232a37;
   color: #ffd600;
@@ -795,16 +800,15 @@ body.dark-mode .timeline-content p {
 
 /* --- Certifications Grid & Cards --- */
 .certifications {
-  background: rgba(255, 255, 255, 0.92); /* light solid background */
-  border-radius: 16px;
-  padding: 2rem;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 4rem auto;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-}
-
-body.dark-mode .certifications {
-  background: rgba(35, 42, 55, 0.95); /* match dark mode */
+  padding: 1.6rem;
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: #ffffff; /* white tile */
+  border-radius: 14px;
+  box-shadow: 0 6px 34px rgba(16, 24, 40, 0.08);
+  position: relative;
+  overflow: visible;
 }
 .section-title {
   font-size: 2rem;
@@ -818,40 +822,31 @@ body.dark-mode .certifications {
 .cert-grid {
   display: flex;
   gap: 1.5rem;
+  align-items: stretch;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 1rem;
-  -webkit-overflow-scrolling: touch; /* smooth mobile scrolling */
-
+  padding: 1rem 0 0.5rem 0;
+  -webkit-overflow-scrolling: touch;
 }
-.cert-card {
-  flex: 0 0 300px; /* fixed width for nice alignment */
-  scroll-snap-align: center;
-.cert-grid::-webkit-scrollbar {
-  display: none;
-}
-.cert-grid {
-  scrollbar-width: none;
-}
-}
-.cert-grid::-webkit-scrollbar {
-  height: 8px;
-}
-.cert-grid::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.3);
-  border-radius: 4px;
-}
+.cert-grid::-webkit-scrollbar { height: 8px; }
+.cert-grid::-webkit-scrollbar-thumb { background: rgba(30,30,30,0.12); border-radius: 8px; }
+.cert-grid { scrollbar-width: thin; scrollbar-color: rgba(30,30,30,0.12) transparent; }
 
 .cert-card {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(4px);
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(67, 126, 234, 0.12);
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #202940;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
   text-align: center;
-  padding: 1.8rem 1.4rem;
-  flex: 0 0 300px; /* for horizontal scrolling layout */
-  transition: box-shadow 0.3s;
+  padding: 1.6rem 1.2rem;
+  transition: box-shadow 0.28s, transform 0.28s;
+  flex: 0 0 300px; /* fixed width for carousel cards */
+  scroll-snap-align: center;
 }
+.cert-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(16,24,40,0.12); }
+
 .cert-card:hover,
 .cert-card:focus {
   box-shadow: 0 10px 28px rgba(67, 126, 234, 0.25);
@@ -873,10 +868,20 @@ body.dark-mode .certifications {
   margin: 0.15rem 0;
 }
 body.dark-mode .cert-card {
-  background: #232a37 !important;
-  color: #fff !important;
-  box-shadow: 0 6px 18px rgba(67, 126, 234, 0.18);
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #202940;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+  text-align: center;
+  padding: 1.6rem 1.2rem;
+  transition: box-shadow 0.28s, transform 0.28s;
+  flex: 0 0 300px; /* fixed width for carousel cards */
+  scroll-snap-align: center;
 }
+.cert-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(16,24,40,0.12); }
+
 body.dark-mode .cert-title,
 body.dark-mode .cert-org,
 body.dark-mode .cert-date {
@@ -887,7 +892,47 @@ body.dark-mode .cert-date {
     font-size: 1.6rem;
   }
   .cert-card {
-    padding: 1.4rem 1rem;
-  }
+  background: rgba(255, 255, 255, 0.82) !important;
+  color: #202940;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(16,24,40,0.06);
+  text-align: center;
+  padding: 1.6rem 1.2rem;
+  transition: box-shadow 0.28s, transform 0.28s;
+  flex: 0 0 300px; /* fixed width for carousel cards */
+  scroll-snap-align: center;
+}
+.cert-card:hover { transform: translateY(-6px); box-shadow: 0 14px 40px rgba(16,24,40,0.12); }
+
 }
 
+
+
+.cert-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.95);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  z-index: 20;
+}
+.cert-arrow:hover { transform: translateY(-50%) scale(1.06); box-shadow: 0 10px 28px rgba(16,24,40,0.12); }
+.cert-prev { left: -18px; }
+.cert-next { right: -18px; }
+
+@media (max-width: 767px) {
+  .cert-arrow { display: none; }
+  .cert-grid { padding-bottom: 0.5rem; gap: 1rem; }
+  .cert-card { flex: 0 0 86%; }
+}
