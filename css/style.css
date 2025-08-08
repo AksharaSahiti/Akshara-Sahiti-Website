@@ -821,10 +821,18 @@ body.dark-mode .certifications {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
+  -webkit-overflow-scrolling: touch; /* smooth mobile scrolling */
+
 }
 .cert-card {
   flex: 0 0 300px; /* fixed width for nice alignment */
   scroll-snap-align: center;
+.cert-grid::-webkit-scrollbar {
+  display: none;
+}
+.cert-grid {
+  scrollbar-width: none;
+}
 }
 .cert-grid::-webkit-scrollbar {
   height: 8px;
