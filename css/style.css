@@ -816,10 +816,10 @@ body.dark-mode .certifications {
   letter-spacing: 0.1em;
 }
 .cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centers them horizontally */
   gap: 2rem;
-  justify-content: center;
 }
 .cert-card {
   background: #fff !important;
